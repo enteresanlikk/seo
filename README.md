@@ -1,6 +1,6 @@
 # Bazı Önemli SEO Uygulamaları
 
-Bugüne kadar geliştirdiğim web sitelerden öğrendiğim bazı SEO uygulamalarını bu dökümanda bulabilirsiniz.
+Bugüne kadar geliştirdiğim web sitelerden öğrendiğim bazı SEO uygulamalarını bu dokümanda bulabilirsiniz.
 
     Bu uygulamalar zamanla eskimiş veya değiştirilmiş olabilir. Bu uygulamaları yapmadan önce güncelliğini kontrol ediniz ve buna uygun olarak uygulamaları gerçekleştiriniz.
 
