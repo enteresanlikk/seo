@@ -66,61 +66,61 @@ Bu şemaları oluşturmak için 2 yönteminiz vardır. Bunlar;
 1. **Microdata**: HTML etiketlerine özellikler eklenerek yapılır. Bu yöntem yerini JSON-LD'ye bırakmaya başlamıştır.
 
 ```html
-    <html>
-        <head>
-            <title>Microdata Schema Example</title>
-        </head>
-        <body>
-            <div itemscope itemtype="https://schema.org/Question">
-                <h1 itemprop="name">What is attr_accessor in Ruby?</h1>
-                <div itemprop="upvoteCount">196</div>
-                <div itemprop="text">I am having difficulty understanding Ruby attr_accessors, can someone explain them?</div>
-                <div>asked <time itemprop="dateCreated" datetime="2010-11-04T20:07Z">Nov 11 '10 at 20:07</time></div>
-                <div itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">someuser</span></div>
-                <div><span itemprop="answerCount">4</span> answers</div>
-                <div itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                    <div itemprop="upvoteCount">1337</div>
-                    <div itemprop="text">
-                    (The text of the accepted answer goes here...).
-                    </div>
-                    <div>answered <time itemprop="dateCreated" datetime="2010-12-01T22:01Z">Dec 1 '10 at 22:01</time></div>
-                    <div itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">anotheruser</span></div>
+<html>
+    <head>
+        <title>Microdata Schema Example</title>
+    </head>
+    <body>
+        <div itemscope itemtype="https://schema.org/Question">
+            <h1 itemprop="name">What is attr_accessor in Ruby?</h1>
+            <div itemprop="upvoteCount">196</div>
+            <div itemprop="text">I am having difficulty understanding Ruby attr_accessors, can someone explain them?</div>
+            <div>asked <time itemprop="dateCreated" datetime="2010-11-04T20:07Z">Nov 11 '10 at 20:07</time></div>
+            <div itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">someuser</span></div>
+            <div><span itemprop="answerCount">4</span> answers</div>
+            <div itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <div itemprop="upvoteCount">1337</div>
+                <div itemprop="text">
+                (The text of the accepted answer goes here...).
                 </div>
-                <div itemprop="suggestedAnswer" itemscope itemtype="https://schema.org/Answer">
-                    <div itemprop="upvoteCount">39</div>
-                    <div itemprop="text">
-                    (Another explanation would go here).
-                    </div>
-                    <div>answered <time itemprop="dateCreated" datetime="2010-12-06T21:11Z">Dec 6 '10 at 21:11</time></div>
-                    <div itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">lonelyuser1234</span></div>
-                </div>
+                <div>answered <time itemprop="dateCreated" datetime="2010-12-01T22:01Z">Dec 1 '10 at 22:01</time></div>
+                <div itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">anotheruser</span></div>
             </div>
-        </body>
-    </html>
+            <div itemprop="suggestedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <div itemprop="upvoteCount">39</div>
+                <div itemprop="text">
+                (Another explanation would go here).
+                </div>
+                <div>answered <time itemprop="dateCreated" datetime="2010-12-06T21:11Z">Dec 6 '10 at 21:11</time></div>
+                <div itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">lonelyuser1234</span></div>
+            </div>
+        </div>
+    </body>
+</html>
 ```
 
 2. **JSON-LD**: JSON formatında verilerinizi oluşturarak yapılır. Oluşturduğunuz JSON verinizi ```<script type="application/ld+json"></script>``` etiketinin içerisine yazarak web sitenizdeki ```<head></head>``` etiketleri arasına ekleyebilirsiniz.
 
     ```html
-        <html>
-            <head>
-                <title>JSON-LD Schema Example</title>
-                <script type='application/ld+json'>
-                    {
-                        "@context": "http://www.schema.org",
-                        "@type": "Organization",
-                        "name": "NAME OF YOUR WEBSITE",
-                        "legalName" : "LEGAL NAME OF YOUR WEBSITE",
-                        "url": "DOMAIN",
-                        "description":  "DESCRIPTION OF YOUR WEBSITE",
-                        "logo": "LOGO URL",
-                    }
-                </script>
-            </head>
-            <body>
-                ...
-            </body>
-        </html>
+    <html>
+        <head>
+            <title>JSON-LD Schema Example</title>
+            <script type='application/ld+json'>
+                {
+                    "@context": "http://www.schema.org",
+                    "@type": "Organization",
+                    "name": "NAME OF YOUR WEBSITE",
+                    "legalName" : "LEGAL NAME OF YOUR WEBSITE",
+                    "url": "DOMAIN",
+                    "description":  "DESCRIPTION OF YOUR WEBSITE",
+                    "logo": "LOGO URL",
+                }
+            </script>
+        </head>
+        <body>
+            ...
+        </body>
+    </html>
     ```
 
 Bu şemaları [schema.org](https://schema.org) adresini kullanarak geliştirebilirsiniz.
@@ -150,7 +150,7 @@ Bu alt özelliğindeki yazıyı web site üzerinde göremezsiniz. Buraya yazıla
 Bu özelliği kullanmak için, resimlerin alt özelliğini girmeniz gerekir.
 
 ```html
-    <img src="https://www.yourdomain.com/assets/img/home/persons.jpg" alt="Biri kadın biri erkek olmak üzere iki insan, deniz kenarındaki restoranda, kahverengi ve üstünde beyaz bir örtü olan masada karşılıklı oturmaktadır.">
+<img src="https://www.yourdomain.com/assets/img/home/persons.jpg" alt="Biri kadın biri erkek olmak üzere iki insan, deniz kenarındaki restoranda, kahverengi ve üstünde beyaz bir örtü olan masada karşılıklı oturmaktadır.">
 ```
 
 ## AJAX Sayfalamasının Kullanım Sonucu Ortaya Çıkan Sorun
