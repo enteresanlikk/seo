@@ -217,19 +217,24 @@ Detaylı bilgiye ulaşmak için [bu](https://developers.google.com/search/docs/a
 
 Robots.txt dosyası, arama motoru tarayıcılarına sitenizdeki hangi URL'lere erişebileceklerini bildirir. Bu yöntem çoğunlukla isteklerin sitenizde yoğunluğa yol açmasını engellemek için kullanılır. Her arama motoru için farklı tanımlamalar vardır.
 
-Örnek sitemap.xml dosyanız şu şekilde olmalıdır.
+Örnek robots.txt dosyanız şu şekilde olmalıdır.
 
 ```txt
+# Example 1: Block only Googlebot
 User-agent: Googlebot
 Disallow: /
 
+# Example 2: Block Googlebot and Adsbot
 User-agent: Googlebot
 User-agent: AdsBot-Google
 Disallow: /
 
+# Example 3: Block all crawlers except AdsBot (AdsBot crawlers must be named explicitly)
 User-agent: *
 Disallow: /
 
+# Example 4: Allow all crawlers
+User-agent: *
 Allow: /
 
 Sitemap: https://www.yourdomain.com/sitemap.xml
